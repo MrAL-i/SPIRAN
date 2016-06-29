@@ -307,90 +307,93 @@ function create_config( )
    "mean"
 
     },
-    sudo_users = {121952579},--Sudo users
+    sudo_users = {95837751},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[ ]],
-    help_text_realm = [[ Realm Commands:
-
-!creategroup [Name]
-Create a group
-
-!createrealm [Name]
-Create a realm
-
-!setname [Name]
-Set realm name
-
-!setabout [group|sgroup] [GroupID] [Text]
-Set a group's about text
-
-!setrules [GroupID] [Text]
-Set a group's rules
-
-!lock [GroupID] [setting]
-Lock a group's setting
-
-!unlock [GroupID] [setting]
-Unock a group's setting
+    help_text_realm = [[دستورات ریلیم(گروه) :
+ 
+!creategroup [ نام ] 
+ایجاد یک گروه 
+ 
+!createrealm [ نام ] 
+ایجاد یک قلمرو 
+ 
+! setname [ نام ] 
+تنظیم نام قلمرو 
+ 
+!setabout [group|sgroup] [GroupID] [text] 
+تنظیم یک گروه در مورد توضيحات
+ 
+! setrules [ GroupID ] [ متن ] 
+تنظیم قوانین یک گروه 
+ 
+!lock [GroupID] [settings]
+قفل کردن تنظيمات یک گروه است 
+ 
+!unlock [GroupID] [settings]
+بازكردن قفل تنظيمات یک گروه است
 
 !settings [group|sgroup] [GroupID]
-Set settings for GroupID
+تنظيم كردن تنظيمات براي گروه
 
 !wholist
-Get a list of members in group/realm
-
+دريافت ليست افراد در گروه يا ريلم 
+ 
 !who
-Get a file of members in group/realm
+دريافت فايل از افراد در گروه يا ريلم
 
 !type
-Get group type
-
+دريافت نوع گروه
+ 
 !kill chat [GroupID]
-Kick all memebers and delete group
+نابودي همه ي افراد و پاك كردن گروه
 
+ 
 !kill realm [RealmID]
-Kick all members and delete realm
-
-!setadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+حذف و اخراج همه ي اعضاي ريلم و پاك كرن ريلم 
+ 
+!addadmin [ id | نام کاربری ] 
+ارتقای یک مدیر با id یا نام کاربری * توسط سودو يا ادمين(صاحب)
+ 
+!removeadmin [ id | نام کاربری ] 
+تنزل كردن يك مدير توسط id و نام كاربري * توسط سودو يا ادمين(صاحب)
 
 !list groups
-Get a list of all groups
-
+دريافت يك ليست از همه ي گروه ها
+ 
 !list realms
-Get a list of all realms
+ دريافت يك ليست از همه ي قلمرو ها
 
 !support
-Promote user to support
+ارتقاي يك كاربر به ساپورت
 
 !-support
-Demote user from support
+تنزل يك كاربر از ساپورت
 
 !log
-Get a logfile of current group or realm
-
+دريافت لوگ يا پرونده ي فعلي گروه يا ريلم 
+ 
 !broadcast [text]
 !broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
+ارسال متن به همه گروه‌ها 
+فقط sudo ها می‌توانند از این فرمان استفاده كنند. 
 
 !bc [group_id] [text]
 !bc 123456789 Hello !
-This command will send text to [group_id]
+اين دستور ارسال خواهد شد به [ايدي گروه مورد نظر]
+ 
+ 
+* * شما می‌توانید از "#" , "!" , "/"  و یا " / " برای همه فرمان‌ها استفاده كنيد.
+ 
+* فقط admins و sudo می‌توانند كه ربات هايي را در گروه ادد كنند.
+ 
+* فقط admins و sudo می‌تواند از ممنوعیت ، unban ، newlink ، setphoto ، setname ، قفل كردن و بازكردن ، تنظيم قوانین و تنظيم توضيحات و درباره و تظيمات دستور ها استفاده كنند.
+ 
+* فقط admins و sudo می‌توانند از  فرمان‌های setowner ، و اطلاعات يوزر موردنظر و دستورات خاص استفاده كنند.
 
-
-**You can use "#", "!", or "/" to begin all commands
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands]],
+🔰Spiran_TG🔰@SPIRAN_CHANNEL
+FOLLOW US...
+SPIRAN TEAM😘]],
     help_text = [[Commands list :
 !kick [username|id]
 You can also do it by reply
