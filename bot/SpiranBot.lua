@@ -486,7 +486,7 @@ FOLLOW US...
 SPIRAN TEAM😘
  ]],
 	help_text_super =[[
-Alominabot SuperGroup Commands:
+SPIRANBot SuperGroup Commands:
 🔷!owner
 دریافت آیدی مدیر اصلی گروه
 🔷!modlist
