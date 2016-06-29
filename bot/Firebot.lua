@@ -310,8 +310,8 @@ function create_config( )
     sudo_users = {95837751},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[ ]],
-    help_text_realm = [[دستورات ریلیم(گروه) :
- 
+    help_text_realm = [[دستورات گروه بات اسپیران :
+ 🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑
 !creategroup [ نام ] 
 ایجاد یک گروه 
  
@@ -348,7 +348,6 @@ function create_config( )
 !kill chat [GroupID]
 نابودي همه ي افراد و پاك كردن گروه
 
- 
 !kill realm [RealmID]
 حذف و اخراج همه ي اعضاي ريلم و پاك كرن ريلم 
  
@@ -381,8 +380,7 @@ function create_config( )
 !bc [group_id] [text]
 !bc 123456789 Hello !
 اين دستور ارسال خواهد شد به [ايدي گروه مورد نظر]
- 
- 
+ 🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑
 * * شما می‌توانید از "#" , "!" , "/"  و یا " / " برای همه فرمان‌ها استفاده كنيد.
  
 * فقط admins و sudo می‌توانند كه ربات هايي را در گروه ادد كنند.
@@ -394,90 +392,98 @@ function create_config( )
 🔰Spiran_TG🔰@SPIRAN_CHANNEL
 FOLLOW US...
 SPIRAN TEAM😘]],
-    help_text = [[Commands list :
+    help_text = [[راهنمای دستورات اسپیران :
+    🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑
 !kick [username|id]
-You can also do it by reply
+اخراج یوزرنیم موردنظر حتی با ریپلای
 !ban [ username|id]
-You can also do it by reply
+بن یوزرنیم موردنظر حتی با ریپلای
 !unban [id]
-You can also do it by reply
+آنبن یوزرنیم موردنظر حتی با ریپلای
 !who
-Members list
+دریافت لیست افراد
 !modlist
-Moderators list
+دریافت لیست مدیران
 !promote [username]
-Promote someone
+ترفیع فرد
 !demote [username]
-Demote someone
+تنزل فرد
 !kickme
-Will kick user
+مرا اخراج کن
 !about
-Group description
+توضیحات گروه
 !setphoto
-Set and locks group photo
+تنظیم عکس گروه
 !setname [name]
-Set group name
+تنظیم نام گروه
 !rules
-Group rules
+قوانین گروه
 !id
-return group id or user id
+دریافت آیدی خود و یا گروه
 !help
-Returns help text
+دریافت راهنما
 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
-*rtl: Kick user if Right To Left Char. is in name*
+قفل کردن موارد بالا
 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
+باز کردن موارد بالا
 *rtl: Kick user if Right To Left Char. is in name*
 !mute [all|audio|gifs|photo|video]
-mute group message types
+مات یا سایلنت کردن موارد بالا
 *If "muted" message type: user is kicked if message type is posted 
 !unmute [all|audio|gifs|photo|video]
-Unmute group message types
+آنمات کردن موارد بالا
 *If "unmuted" message type: user is not kicked if message type is posted 
 !set rules <text>
-Set <text> as rules
+تنظیم متن مورد نظر به عنوان قوانین
 !set about <text>
-Set <text> as about
+تنظیم متن مورد نظر به عنوان توضیحات
 !settings
-Returns group settings
+دریافت تنظیمات
 !muteslist
-Returns mutes for chat
+دریافت چیز های مات شده
 !muteuser [username]
-Mute a user in chat
+مات کردن فرد مورد نظر
 *user is kicked if they talk
 *only owners can mute | mods and owners can unmute
 !mutelist
-Returns list of muted users in chat
+لیست افراد مات شده
 !newlink
-create/revoke your group link
+ساخت یا تعویض لینک گروه
 !link
-returns group link
+دریافت لینک گروه
 !owner
-returns group owner id
+دریافت صاحب گروه
 !setowner [id]
-Will set id as owner
+تنظیم صاحب گروه
 !setflood [value]
-Set [value] as flood sensitivity
+تنظیم حساسیت ربات
 !stats
-Simple message statistics
+دریافت وضعیت چت ها
 !save [value] <text>
-Save <text> as [value]
+سیو کردن متن مورد نظر
 !get [value]
-Returns text of [value]
+دریافت متن سیو شده
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاک کردن موارد بالا
 !res [username]
-returns user id
+دریافت اطلاعات نام کاربری مورد نظر
 "!res @username"
 !log
-Returns group logs
+دریافت لاگ گروه
 !banlist
-will return group ban list
-**You can use "#", "!", or "/" to begin all commands
-*Only owner and mods can add bots in group
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-*Only owner can use res,setowner,promote,demote and log commands
+دریافت لیست افراد بن شده
+🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑🔑
+* * شما می‌توانید از "#" , "!" , "/"  و یا " / " برای همه فرمان‌ها استفاده كنيد.
+ 
+* فقط admins و sudo می‌توانند كه ربات هايي را در گروه ادد كنند.
+ 
+* فقط admins و sudo می‌تواند از ممنوعیت ، unban ، newlink ، setphoto ، setname ، قفل كردن و بازكردن ، تنظيم قوانین و تنظيم توضيحات و درباره و تظيمات دستور ها استفاده كنند.
+ 
+* فقط admins و sudo می‌توانند از  فرمان‌های setowner ، و اطلاعات يوزر موردنظر و دستورات خاص استفاده كنند.
+
+🔰Spiran_TG🔰@SPIRAN_CHANNEL
+FOLLOW US...
+SPIRAN TEAM😘
  ]],
 	help_text_super =[[
 Alominabot SuperGroup Commands:
@@ -564,7 +570,7 @@ Alominabot SuperGroup Commands:
 🔷!help fun
 دریافت راهنمای تفریحی
 
-✅Alominateam✅
+✅@SPIRAN_CHANNEL✅
 ]],
   }
   serialize_to_file(config, './data/config.lua')
