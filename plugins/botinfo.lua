@@ -2,11 +2,13 @@ do
     function run(msg, matches)
         
   local text = [[
-✅Alomina is best bot✅
+✅SPIRAN is The best bot✅
 
-Sudo : @Alominasudo
+Sudo : @Mr_AL_i
 
-Bot id : https://telegram.me/alomina
+Bot id : https://telegram.me/Spiran_TG
+
+دریافت راهنما : /help , /superhelp
 
 ]]
     return text
