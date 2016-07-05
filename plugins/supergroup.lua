@@ -93,7 +93,7 @@ for k,v in pairsByKeys(result) do
 if not v.first_name then
 	name = " "
 else
-	vname = v.first_name:gsub("‮", "")
+	vname = v.first_name:gsub("?", "")
 	name = vname:gsub("_", " ")
 	end
 		text = text.."\n"..i.." - "..name.."["..v.peer_id.."]"
@@ -126,7 +126,7 @@ for k,v in pairsByKeys(result) do
 if not v.print_name then
 	name = " "
 else
-	vname = v.print_name:gsub("‮", "")
+	vname = v.print_name:gsub("?", "")
 	name = vname:gsub("_", " ")
 end
 	if v.username then
@@ -155,7 +155,7 @@ for k,v in pairsByKeys(result) do
 if not v.print_name then
 	name = " "
 else
-	vname = v.print_name:gsub("‮", "")
+	vname = v.print_name:gsub("?", "")
 	name = vname:gsub("_", " ")
 end
 	if v.username then
@@ -1033,7 +1033,7 @@ function show_supergroup_settingsmod(msg, target)
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "🔶SuperGroup Name : "..msg.to.print_name.."\n 🔷requester: @"..msg.from.username.."\n➖➖➖➖➖➖➖➖➖➖➖➖➖\n ⚙SuperGroup settings⚙:\n⚙ Lock links 📰 : "..settings.lock_link.."\n⚙Lock flood 👾 : "..settings.flood.."\n⚙Flood sensitivity 🔢 : "..NUM_MSG_MAX.."\n⚙Lock spam 👹 : "..settings.lock_spam.."\n⚙Lock Arabic 🎫 : "..settings.lock_arabic.."\n⚙ Lock Member 👽 : "..settings.lock_member.."\n⚙Lock Fwd ♐️ : 'no'️ : "..settings.anti_fwd.."\n⚙Lock audio 🗣 : 'no'️ : "..settings.lock_audio.. "\n⚙Lock emoji 😂 : 'no'️ : "..settings.lock_emoji.."\n⚙Lock gif 🚶 : 'no'️ : "..settings.lock_gif.."\n⚙Lock number 🔢 : 'no'️ : "..settings.lock_number.."\n⚙Lock photo 🌅 : 'no'️ : "..settings.lock_photo.."\n⚙Lock video 🌌 : 'no'️ : "..settings.lock_video.."\n⚙Lock reply ♐️ : 'no'️ : "..settings.anti_reply.."\n⚙Lock share ♐️ : 'no'️ : "..settings.lock_share.."\n⚙Lock RTL 〽️ : "..settings.lock_rtl.."\n⚙ Lock Tgservice ☢ : "..settings.lock_tgservice.."\n⚙Lock sticker 🎆 : "..settings.lock_sticker.."\n⚙ Lock tag #️⃣ : "..settings.tag.."\n⚙Lock english 🆎 : "..settings.english.."\n⚙Lock join 🗝 : "..settings.join.."\n⚙Lock leave ↗️ : "..settings.leave.."\n⚙Lock bots 🤖 : "..bots_protection.."\n⚙group type : "..gp_type.."\n⚙Public ☣ : "..settings.public.."\n⚙Strict settings 🚫 : "..settings.strict.."\n  ➖➖➖➖➖➖➖➖➖➖➖➖➖\n🔑switch:\n 🗝Etehad 🎯 : "..settings.etehad.."\n🗝all 🎟 : "..settings.all.."\n〰〰〰〰〰〰〰〰〰〰〰〰〰\n⚠@SPIRAN_CHANNEL⚠"  return text  end
+  local text = "??SuperGroup Name : "..msg.to.print_name.."\n ??requester: @"..msg.from.username.."\n?????????????\n ?SuperGroup settings?:\n? Lock links ?? : "..settings.lock_link.."\n?Lock flood ?? : "..settings.flood.."\n?Flood sensitivity ?? : "..NUM_MSG_MAX.."\n?Lock spam ?? : "..settings.lock_spam.."\n?Lock Arabic ?? : "..settings.lock_arabic.."\n? Lock Member ?? : "..settings.lock_member.."\n?Lock Fwd ?? : "..settings.anti_fwd.."\n?Lock audio ?? : "..settings.lock_audio.. "\n?Lock emoji ?? : "..settings.lock_emoji.."\n?Lock gif ?? : "..settings.lock_gif.."\n?Lock number ?? : "..settings.lock_number.."\n?Lock photo ?? : "..settings.lock_photo.."\n?Lock video ?? : "..settings.lock_video.."\n?Lock reply ?? : "..settings.anti_reply.."\n?Lock share ?? : "..settings.lock_share.."\n?Lock RTL ?? : "..settings.lock_rtl.."\n? Lock Tgservice ? : "..settings.lock_tgservice.."\n?Lock sticker ?? : "..settings.lock_sticker.."\n? Lock tag #?? : "..settings.tag.."\n?Lock english ?? : "..settings.english.."\n?Lock join ?? : "..settings.join.."\n?Lock leave ?? : "..settings.leave.."\n?Lock bots ?? : "..bots_protection.."\n?group type : "..gp_type.."\n?Public ? : "..settings.public.."\n?Strict settings ?? : "..settings.strict.."\n  ?????????????\n??switch:\n ??Etehad ?? : "..settings.etehad.."\n??all ?? : "..settings.all.."\n?????????????\n?@SPIRAN_CHANNEL?"  return text  end
 local function promote_admin(receiver, member_username, user_id)
   local data = load_data(_config.moderation.data)
   local group = string.gsub(receiver, 'channel#id', '')
@@ -1114,7 +1114,7 @@ function get_message_callback(extra, success, result)
 	local get_cmd = extra.get_cmd
 	local msg = extra.msg
 	local data = load_data(_config.moderation.data)
-	local print_name = user_print_name(msg.from):gsub("‮", "")
+	local print_name = user_print_name(msg.from):gsub("?", "")
 	local name_log = print_name:gsub("_", " ")
     if get_cmd == "id" and not result.action then
 		local channel = 'channel#id'..result.to.peer_id
@@ -1215,7 +1215,7 @@ function get_message_callback(extra, success, result)
 	elseif get_cmd == "promote" then
 		local receiver = result.to.peer_id
 		local full_name = (result.from.first_name or '')..' '..(result.from.last_name or '')
-		local member_name = full_name:gsub("‮", "")
+		local member_name = full_name:gsub("?", "")
 		local member_username = member_name:gsub("_", " ")
 		if result.from.username then
 			member_username = '@'.. result.from.username
@@ -1228,7 +1228,7 @@ function get_message_callback(extra, success, result)
 		end
 	elseif get_cmd == "demote" then
 		local full_name = (result.from.first_name or '')..' '..(result.from.last_name or '')
-		local member_name = full_name:gsub("‮", "")
+		local member_name = full_name:gsub("?", "")
 		local member_username = member_name:gsub("_", " ")
     if result.from.username then
 		member_username = '@'.. result.from.username
@@ -1430,7 +1430,7 @@ local function in_channel_cb(cb_extra, success, result)
   local receiver = cb_extra.receiver
   local msg = cb_extra.msg
   local data = load_data(_config.moderation.data)
-  local print_name = user_print_name(cb_extra.msg.from):gsub("‮", "")
+  local print_name = user_print_name(cb_extra.msg.from):gsub("?", "")
   local name_log = print_name:gsub("_", " ")
   local member = cb_extra.username
   local memberid = cb_extra.user_id
@@ -1583,7 +1583,7 @@ local function run(msg, matches)
 	if msg.to.type == 'channel' then
 	local support_id = msg.from.id
 	local receiver = get_receiver(msg)
-	local print_name = user_print_name(msg.from):gsub("‮", "")
+	local print_name = user_print_name(msg.from):gsub("?", "")
 	local name_log = print_name:gsub("_", " ")
 	local data = load_data(_config.moderation.data)
 		if matches[1] == 'add' and not matches[2] then
@@ -1733,7 +1733,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return "⭕️SuperGroup Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\n\n🆔SuperGroup ID: "..msg.to.id
+				return "??SuperGroup Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\n\n??SuperGroup ID: "..msg.to.id
 			end
 		end
 
